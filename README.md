@@ -1,1 +1,1 @@
-# Currency-Calculator-App
+# currency-calculator-app
