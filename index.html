@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Currency Calculator</h1>
+
+        <form id="currency-form">
+            <div class="amount">
+                <label for="amount">Enter Amount</label>
+                <input type="number" id="amount" value="100" min="0" step="any" required>
+            </div>
+
+            <div class="dropdown">
+                <div class="currency">
+                    <label for="from">From</label>
+                    <div class="select-container">
+                        <img id="from-flag" src="https://flagsapi.com/US/flat/64.png" alt="Source country flag">
+                        <select name="from" id="from">
+                            <option value="USD" selected>USD</option>
+                            <option value="INR">INR</option>
+                            <option value="EUR">EUR</option>
+                            <option value="GBP">GBP</option>
+                            <option value="AUD">AUD</option>
+                            <option value="CAD">CAD</option>
+                            <option value="JPY">JPY</option>
+                            <option value="SGD">SGD</option>
+                            <option value="AED">AED</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="button" class="icon" id="swap" aria-label="Swap currencies">
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                </button>
+
+                <div class="currency">
+                    <label for="to">To</label>
+                    <div class="select-container">
+                        <img id="to-flag" src="https://flagsapi.com/IN/flat/64.png" alt="Target country flag">
+                        <select name="to" id="to">
+                            <option value="USD">USD</option>
+                            <option value="INR" selected>INR</option>
+                            <option value="EUR">EUR</option>
+                            <option value="GBP">GBP</option>
+                            <option value="AUD">AUD</option>
+                            <option value="CAD">CAD</option>
+                            <option value="JPY">JPY</option>
+                            <option value="SGD">SGD</option>
+                            <option value="AED">AED</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <p class="msg" id="result" aria-live="polite">
+                Getting exchange rate...
+            </p>
+
+            <button type="submit" class="btn">
+                GET EXCHANGE RATE
+            </button>
+        </form>
+    </div>
+
+    <script src="aap.js"></script>
+</body>
+
+</html>

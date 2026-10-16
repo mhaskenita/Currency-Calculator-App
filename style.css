@@ -1,0 +1,159 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #dceeff, #e9ddff);
+}
+
+.container {
+    width: 100%;
+    max-width: 430px;
+    padding: 30px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+}
+
+h1 {
+    text-align: center;
+    font-size: 27px;
+    margin-bottom: 30px;
+    color: #25294a;
+}
+
+.amount label,
+.currency label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+.amount input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 18px;
+    outline-color: #6554d9;
+}
+
+.dropdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.currency {
+    flex: 1;
+    min-width: 0;
+}
+
+.select-container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.select-container img {
+    width: 32px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.select-container select {
+    width: 100%;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.icon {
+    align-self: flex-end;
+    margin-bottom: 7px;
+    border: none;
+    background: #eeeaff;
+    color: #6554d9;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.icon:hover {
+    background: #6554d9;
+    color: white;
+}
+
+.msg {
+    min-height: 45px;
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 16px;
+    font-weight: bold;
+    color: #30365e;
+    overflow-wrap: anywhere;
+}
+
+.btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 9px;
+    background: #6554d9;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #4939b8;
+}
+
+.btn:disabled {
+    opacity: 0.65;
+    cursor: wait;
+}
+
+@media (max-width: 380px) {
+    .container {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 23px;
+    }
+
+    .dropdown {
+        gap: 7px;
+    }
+
+    .select-container {
+        padding: 6px 4px;
+    }
+
+    .select-container img {
+        width: 25px;
+    }
+}
